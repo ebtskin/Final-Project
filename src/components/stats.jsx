@@ -38,7 +38,7 @@ class Stats extends Component {
             <small class="text-muted">Traffic Statistic</small>
           </h3>
         </div>
-        <div class="row">
+        <div class="row rounded">
           <div class="col-xl-4 col-sm-6 py-2">
             <div class="card-body bg-success text-white">
               <i class="fa fa-camera-retro fa-3x"></i>

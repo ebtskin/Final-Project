@@ -57,7 +57,6 @@ class App extends Component {
                   <h3 className="text-center text-white">Real Time Traffic</h3>
                 </blockquote>
               </div>
-              <ReatTime />
             </div>
           </div>
         </main>

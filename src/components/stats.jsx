@@ -10,6 +10,7 @@ class Stats extends Component {
     captureDomains: 0,
   };
 
+//Make api call to get the data to display for each card
   async componentDidMount() {
     const { data: captureDomains } = await Axios.get(
       "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play"
@@ -22,6 +23,7 @@ class Stats extends Component {
     const { data: inProgressJobs } = await Axios.get(
       "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/capture/list"
     );
+//Saving data
     this.setState({ inProgressJobs });
     this.setState({ captureJobs });
     this.setState({ captureDomains });

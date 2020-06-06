@@ -44,7 +44,7 @@ class Playback extends Component {
       this.state.pageSize
     );
 
-    if (count === 0) return <p>There are no job in the database.</p>;
+    if (count === 0) return <p>There are no jobs in the database.</p>;
 
     return (
       <React.Fragment>
@@ -93,3 +93,4 @@ class Playback extends Component {
 }
 
 export default Playback;
+

@@ -59,8 +59,8 @@ class RealTime extends Component {
                 <th>JOBID</th>
                 <th>UTime</th>
                 <th>Host</th>
-
                 <th>METHOD</th>
+                <th>URI</th>
               </tr>
             </thead>
             <tbody>
@@ -71,6 +71,7 @@ class RealTime extends Component {
                   <td className="w-25 word-wrap">{job.host}</td>
 
                   <td>{job.method}</td>
+                  <td className="w-25 word-wrap">{job.uri}</td>
                 </tr>
               ))}
             </tbody>
@@ -93,3 +94,4 @@ class RealTime extends Component {
 }
 
 export default RealTime;
+

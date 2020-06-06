@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./components/navBar"; //top navbar
 import SideBar from "./components/sideBar"; //side navbar
 import Stats from "./components/stats"; //bootstrap card stats
-import Chart from "./components/doughnutChart"; //chartjs capture method
+import Chart from "./components/doughnutChart"; //chartjs capture methods
 
 import Playback from "./components/playback"; //playback traffic
 import CaptureJob from "./components/captureJobs"; //capture traffic
@@ -69,4 +69,3 @@ class App extends Component {
 }
 
 export default App;
-

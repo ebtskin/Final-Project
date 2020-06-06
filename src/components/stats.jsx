@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import "font-awesome";
+import "font-awesome/css/font-awesome.min.css";
 import Axios from "axios";
 
 class Stats extends Component {

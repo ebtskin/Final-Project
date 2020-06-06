@@ -17,6 +17,7 @@ class App extends Component {
         <main className="container">
           <div className="row">
             <div className="col-md-3 bg-light fixed-top">
+              <NavBar />
             </div>
           </div>
         </main>

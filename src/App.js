@@ -18,8 +18,6 @@ class App extends Component {
           <div className="row">
             <div className="col-md-3 bg-light fixed-top">
               <NavBar />
-              <SideBar />
-              <Chart />
             </div>
 
             <div className="col-md-9 offset-3">

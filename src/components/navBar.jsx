@@ -57,7 +57,9 @@ class RealTime extends Component {
             <thead>
               <tr className="text-secondary">
                 <th>JOBID</th>
+
                 <th>UTime</th>
+                <th>PROTOCOL</th>
                 <th>Host</th>
                 <th>METHOD</th>
                 <th>URI</th>
@@ -68,7 +70,9 @@ class RealTime extends Component {
               {jobs.map((job) => (
                 <tr key={job.id} className="w-25 text-dark">
                   <td>{job.id}</td>
+
                   <td>{job.utime}</td>
+                  <td>{job.protocol}</td>
                   <td className="w-25 word-wrap">{job.host}</td>
 
                   <td>{job.method}</td>

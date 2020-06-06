@@ -18,11 +18,11 @@ class Playback extends Component {
     startTime: 0,
     endTime: 0,
   };
-
+//change play button text
   changeText = (text) => {
     this.setState({ text });
   };
-
+//grab data
   async componentDidMount() {
     const { data: jobs } = await Axios.get(
       "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/capture/jobs"
@@ -30,7 +30,7 @@ class Playback extends Component {
 
     this.setState({ jobs });
   }
-
+//save data when button click
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
   };
@@ -93,4 +93,3 @@ class Playback extends Component {
 }
 
 export default Playback;
-

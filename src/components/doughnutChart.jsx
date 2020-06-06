@@ -14,6 +14,7 @@ class DoughnutChart extends React.Component {
     },
   };
 
+//grab data and set data when component stat
   async componentDidMount() {
     const datasets = [
       {

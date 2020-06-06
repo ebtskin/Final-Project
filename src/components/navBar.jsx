@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
+//Fixed navbar with toggle button
 const Date = (props) => {
   return (
     <React.Fragment>

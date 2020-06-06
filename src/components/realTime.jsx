@@ -21,7 +21,7 @@ class RealTime extends Component {
   changeText = (text) => {
     this.setState({ text });
   };
-
+//grab data to display in our table
   async componentDidMount() {
     const { data: jobs } = await Axios.get(
       "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play"
@@ -57,21 +57,27 @@ class RealTime extends Component {
             <thead>
               <tr className="text-secondary">
                 <th>JOBID</th>
+
                 <th>UTime</th>
+                <th>PROTOCOL</th>
                 <th>Host</th>
                 <th>METHOD</th>
                 <th>URI</th>
+                <th>SECURE</th>
               </tr>
             </thead>
             <tbody>
               {jobs.map((job) => (
                 <tr key={job.id} className="w-25 text-dark">
                   <td>{job.id}</td>
+
                   <td>{job.utime}</td>
+                  <td>{job.protocol}</td>
                   <td className="w-25 word-wrap">{job.host}</td>
 
                   <td>{job.method}</td>
                   <td className="w-25 word-wrap">{job.uri}</td>
+                  <td className="w-25 word-wrap">{job.secure}</td>
                 </tr>
               ))}
             </tbody>
@@ -94,4 +100,3 @@ class RealTime extends Component {
 }
 
 export default RealTime;
-

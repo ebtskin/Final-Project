@@ -36,6 +36,7 @@ class Capture extends Component {
     endDate: new Date(),
   };
 
+//input validation
   schema = {
     jobName: Joi.string().required().label("Job Name"),
     uri: Joi.string().optional().allow("").label("URI"),
@@ -58,6 +59,7 @@ class Capture extends Component {
     // Message: Joi.string().label("Message"),
   };
 
+//validate input
   validate = () => {
     const result = Joi.validate(this.state.capture, this.schema, {
       abortEarly: false,
@@ -77,6 +79,7 @@ class Capture extends Component {
     return null;
   };
 
+//handle submit
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -87,6 +90,7 @@ class Capture extends Component {
     this.submit();
   };
 
+//Get data
   async submit() {
     console.log(this.state);
     const {
@@ -99,6 +103,7 @@ class Capture extends Component {
     console.log(message);
   }
 
+//Suppose to output error for each input
   handleChange = ({ currentTarget: input }) => {
     const errors = { ...this.state.errors };
     const errorMessage = this.validateProperty(input);
@@ -110,18 +115,20 @@ class Capture extends Component {
     this.setState({ capture, errors });
   };
 
+//get input select value
   onSelect = ({ currentTarget: input }) => {
     const capture = { ...this.state.capture };
     capture[input.name] = input.value;
     this.setState({ capture });
   };
 
+//start date input
   handleStartDate = (date) => {
     this.setState({
       startDate: date,
     });
   };
-
+//save end date
   handleEndDate = (date) => {
     this.setState({
       endDate: date,

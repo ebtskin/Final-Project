@@ -19,6 +19,7 @@ class TrafficStatistic extends React.Component {
     };
   }
 
+//get data from api call
   componentDidMount = () => {
     let url = "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play";
     fetch(url)
@@ -41,6 +42,7 @@ class TrafficStatistic extends React.Component {
       });
   };
 
+//render the chart
   render() {
     return (
       <div>
@@ -50,6 +52,8 @@ class TrafficStatistic extends React.Component {
   }
 }
 
+
+//charjs colors
 const lineColors = [
   "rgb(237, 41, 58)",
   "rgb(75,192,192)",
@@ -58,6 +62,7 @@ const lineColors = [
   "rgb(33, 133, 208)",
 ];
 
+//charjs options
 const options = {
   responsive: true,
   scales: {

@@ -1,5 +1,6 @@
 import React from "react";
 
+//sidebar menu with fixed top
 const NavBar = () => {
   return (
     <div className="row">

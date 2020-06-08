@@ -9,7 +9,7 @@ class RealTime extends Component {
     message: [],
     text: "Play",
     currentPage: 1,
-    pageSize: 12,
+    pageSize: 18,
   };
 
   capture = {

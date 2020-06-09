@@ -73,7 +73,7 @@ class Playback extends Component {
                     label="Playback"
                     text={this.state.text}
                     jobName={job.jobName}
-                    jobId={job.jobId}
+                    jobId={job.jobID}
                   />
                 </tr>
               ))}

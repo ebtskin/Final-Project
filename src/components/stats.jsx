@@ -17,11 +17,11 @@ class Stats extends Component {
     );
 
     const { data: captureJobs } = await Axios.get(
-      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/capture/jobs"
+      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/capture/status"
     );
 
     const { data: inProgressJobs } = await Axios.get(
-      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/capture/list"
+      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play/status"
     );
 //Saving data
     this.setState({ inProgressJobs });
@@ -50,14 +50,14 @@ class Stats extends Component {
             <div class="card-body bg-danger text-white">
               <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
               <h6 class="text-uppercase">Capture Jobs</h6>
-              <h1 class="display-4">{this.state.captureJobs.length}</h1>
+              <h1 class="display-4">{this.state.captureJobs.inprogress.length}</h1>
             </div>
           </div>
           <div class="col-xl-4 col-sm-6 py-2">
             <div class="card-body bg-info text-white">
               <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
               <h6 class="text-uppercase">Playback Jobs</h6>
-              <h1 class="display-4">{this.state.inProgressJobs.length}</h1>
+              <h1 class="display-4">{this.state.inProgressJobs.inprogress.length}</h1>
             </div>
           </div>
           <br />

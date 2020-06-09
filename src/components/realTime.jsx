@@ -9,7 +9,7 @@ class RealTime extends Component {
     message: [],
     text: "Play",
     currentPage: 1,
-    pageSize: 18,
+    pageSize: 5,
   };
 
   capture = {
@@ -21,10 +21,13 @@ class RealTime extends Component {
   changeText = (text) => {
     this.setState({ text });
   };
-//grab data to display in our table
+
   async componentDidMount() {
-    const { data: jobs } = await Axios.get(
-      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play"
+    const {
+      data: jobs,
+    } = await Axios.post(
+      "http://ec2-54-152-230-158.compute-1.amazonaws.com:7999/api/play/realtime",
+      { limit: 100 }
     );
 
     this.setState({ jobs });
@@ -51,7 +54,7 @@ class RealTime extends Component {
           <br />
           <p className="text-center text-secondary">
             {" "}
-            Showing {count} available playback jobs in the database.
+            Showing {count} capture traffics jobs in the database.
           </p>
           <table className="table table-hover">
             <thead>

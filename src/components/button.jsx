@@ -10,15 +10,20 @@ class Button extends Component {
   };
 
   capture = {
-    jobName: "",
-    startTime: 0,
-    endTime: 0,
+    jobId: 37,
+    verbose: 0,
+    playbackSpeed: 1000,
+    port: 8080,
+    securePort: 443,
+    requestBufferTime: 10000,
+    hostname: "localhost",
+    backendServer: "1",
+    playbackName: "play2",
   };
 
-  setText = (jobName) => {
-    this.capture.jobName = jobName;
-    this.capture.startTime = this.state.startDate;
-    this.capture.endTime = this.state.endDate;
+  setText = (info) => {
+    this.capture.playbackName = info.jobName;
+    this.capture.jobId = info.jobId;
     console.log(this.capture);
     this.handleSubmit();
   };
@@ -73,10 +78,11 @@ class Button extends Component {
         </td>
         <td>
           <button
-            onClick={() => this.setText(this.props.jobName)}
+            onClick={() => this.setText(this.props)}
             value={this.props.value}
             id={this.props.id}
             className="btn btn-info btn-sm"
+            jobId={this.props.jobId}
           >
             {this.state.text}
           </button>
